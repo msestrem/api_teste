@@ -37,7 +37,7 @@ def calcular_produto_endpoint():
         return jsonify({'error': 'Quantidade inválida'}), 400
 
     produto = quantidade * preco
-    return jsonify({'resultado': produto})
+    return jsonify({"montlhyCost": produto, "orderCost": preco})
 
 
 if __name__ == '__main__':
