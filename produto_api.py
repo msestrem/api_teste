@@ -1,13 +1,14 @@
 from flask import Flask, request, jsonify
-
+# env\Scripts\activate
 app = Flask(__name__)
 
 preco_unit = [{'cpfCnpj': '40238802000159', 'preco': float(0.58)},
-                   {'cpfCnpj': '10423979000164', 'preco': float(0.62)},
-                   {'cpfCnpj': '37789234000170', 'preco': float(0.88)},
-                   {'cpfCnpj': '14991918000154', 'preco': float(0.83)},
-                   {'cpfCnpj': '40988513000177', 'preco': float(0.45)},
-                   {'cpfCnpj': '44765328000174', 'preco': float(0.29)}]
+                {'cpfCnpj': '10423979000164', 'preco': float(0.62)},
+                {'cpfCnpj': '37789234000170', 'preco': float(0.88)},
+                {'cpfCnpj': '14991918000154', 'preco': float(0.83)},
+                {'cpfCnpj': '40988513000177', 'preco': float(0.45)},
+                {'cpfCnpj': '44765328000174', 'preco': float(0.29)},
+                {'cpfCnpj': '23333456000179', 'preco': float(0.19)}]
 
 
 @app.route('/calcular-produto', methods=['POST'])
